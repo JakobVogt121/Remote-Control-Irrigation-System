@@ -51,14 +51,21 @@ void loop() {
 void onReceive(int packetSize) {
   if (packetSize == 0) return;          // if there's no packet, return
 
-  int recipient = LoRa.read();
+  int target = LoRa.read();
+  Serial.print("target: ");
+  Serial.println(target, HEX);
+  int sender = LoRa.read();
+  Serial.print("sender: ");
+  Serial.println(sender, HEX);
+  
   String incoming = "";
 
   while (LoRa.available()) {
+    //Serial.print(LoRa.read(), HEX);
     incoming += (char)LoRa.read();
   }
 
-  if (recipient != localAddress && recipient != 0xFF) {
+  if (target != localAddress && target != 0xFF) {
     Serial.println("This message is not for me.");
     return;                             // skip rest of function
   }

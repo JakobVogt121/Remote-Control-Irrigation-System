@@ -5,7 +5,7 @@
 #define rst 14
 #define dio0 26
 
-String message;
+String message = "hallo";
 
 byte localAddress = 0xFF;  
 byte destination = 0xBB;
@@ -36,8 +36,8 @@ void loop() {
   if (message.length() > 0) {
     Serial.println("Juan: " + message); //name seen in Serial Monitor
     LoRa.beginPacket();
-    LoRa.write(destination);            
-    LoRa.write(localAddress);
+    LoRa.write(destination); // 0xBB           
+    LoRa.write(localAddress); // 0xFF
     LoRa.print("Juan: " + message); //name seen on the receiving end
     LoRa.endPacket();
     message = "";
