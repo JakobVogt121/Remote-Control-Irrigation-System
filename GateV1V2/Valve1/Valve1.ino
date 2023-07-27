@@ -12,16 +12,14 @@ byte gateAddress = 0xFF;
 struct LoRaMsg {
   byte receiver;
   byte transmitter;
-  String msg;
+  bool state;
 };
 
 LoRaMsg msgOut = {
   gateAddress,
   valve1Address,
-  ""
+  false
 };
-
-//String message;
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -41,53 +39,42 @@ void setup() {
 }
 
 void loop() {
-  while (Serial.available()) {
-    delay(2);  //delay to allow byte to arrive in input buffer
-    char c = Serial.read();
-    msgOut.msg += c;
-  }
-
-  if (msgOut.msg.length() > 0) {
-    Serial.println("Valve1 sends to Gate: " + msgOut.msg);
-    LoRa.beginPacket();
-    LoRa.write(msgOut.receiver);
-    LoRa.write(msgOut.transmitter);
-    LoRa.print("Valve1: " + msgOut.msg);  //name seen on the receiving end
-    LoRa.endPacket();
-    msgOut.msg = "";
-  }
-
   onReceive(LoRa.parsePacket());
 }
 
 void onReceive(int packetSize) {
   if (packetSize == 0) return;  // if there's no packet, return
 
-  int target = LoRa.read();
-  int transmitter = LoRa.read();
+  byte target = LoRa.read();
+  byte transmitter = LoRa.read();
+  bool state = LoRa.read();
 
-  String incoming = "";
-  while (LoRa.available()) {
-    incoming += (char)LoRa.read();
-  }
+  /*
+  Serial.println(target,HEX);
+  Serial.println(transmitter,HEX);
+  Serial.println((char)state ? "TRUE" : "FALSE");  
+  */
 
   if (target != valve1Address) {
-    //Serial.println("This message is not for me.");
     return;  // skip rest of function
   }
+  
+  digitalWrite(LED_BUILTIN, state);
+  //Serial.print("RSSI: ");
+  //Serial.println(LoRa.packetRssi());
+  // acknowledge message
+  confirm_cmd(state);
+}
 
-  // Msg immer vom Gate
-  /*if (transmitter == gateAddress) {
-    Serial.println("Message from gate:");
-  } else {
-    Serial.println(transmitter, HEX);
-  }*/
-
-  digitalWrite(LED_BUILTIN, HIGH);
-  Serial.print(incoming);
-  Serial.print(" || RSSI: ");
-  Serial.println(LoRa.packetRssi());
+void confirm_cmd(bool state) {
+  msgOut.state = state;
+  delay(10);
+  Serial.print("Valve1 sends: ");
+  Serial.println((msgOut.state) ? "TRUE" : "FALSE");
   Serial.println();
-  delay(1000);
-  digitalWrite(LED_BUILTIN, LOW);
+  LoRa.beginPacket();
+  LoRa.write(msgOut.receiver);
+  LoRa.write(msgOut.transmitter);
+  LoRa.write(msgOut.state);
+  LoRa.endPacket();
 }
