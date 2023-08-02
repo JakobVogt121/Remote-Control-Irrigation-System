@@ -38,13 +38,13 @@ void setup() {
   SPI.begin(5, 19, 27, 18);
   LoRa.setPins(ss, rst, dio0);
   if (!LoRa.begin(868E6)) {
-    Serial.println("Start of LoRa failed!");
+    //Serial.println("Start of LoRa failed!");
     while (1)
       ;
   }
   delay(1000);
   pinMode(LED_BUILTIN, OUTPUT);  // for debugging/visualization
-  Serial.println("Gate ready");
+  //Serial.println("Gate ready");
 }
 
 void loop() {
@@ -55,11 +55,11 @@ void loop() {
     char c_state = Serial.read();
     state = c_state - '0';
     delay(10);
-    Serial.println("Gate sends: ");
+    /*Serial.println("Gate sends: ");
     Serial.print("Receiver Valve: ");
     Serial.print(receiverAddress);
     Serial.print("\nstate: ");
-    Serial.println(state);
+    Serial.println(state);*/
 
     LoRa.beginPacket();
     LoRa.write(receiverAddress);
@@ -77,7 +77,7 @@ void onLoRaonReceive(int packetSize) {
   int target = LoRa.read();
   int state = LoRa.read();
 
-  Serial.println("Received from Valves: ");
+  //Serial.println("Received from Valves: ");
   Serial.print(target);
   Serial.print(state);
   Serial.println();
