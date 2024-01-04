@@ -6,14 +6,14 @@
 Erhält von Node-Red über Serielle Schnittstelle:
   10: Ventil 1 aus
   11: Ventil 1 an
-  20: Ventil 1 aus
-  21: Ventil 1 an
+  20: Ventil 2 aus
+  21: Ventil 2 an
 und sendet die Daten über LoRa weiter an easyValves.
 Bekommt Daten von easyValves über LoRa zurück und sendet diese wieder über Serielle Schnittstelle an Node-Red
   10: Ventil 1 aus
   11: Ventil 1 an
-  20: Ventil 1 aus
-  21: Ventil 1 an
+  20: Ventil 2 aus
+  21: Ventil 2 an
 */
 
 #include <LoRa.h>
@@ -26,6 +26,7 @@ Bekommt Daten von easyValves über LoRa zurück und sendet diese wieder über Se
 const byte gateAddress = 0;
 const byte valve1Address = 1;
 const byte valve2Address = 2;
+const byte valve2Address = 3;
 byte receiverAddress = 0;
 byte state;
 
@@ -67,12 +68,12 @@ void loop() {
     LoRa.endPacket();
   }
 
-  onLoRaonReceive(LoRa.parsePacket());
+  onLoRaReceive(LoRa.parsePacket());
 }
 
-void onLoRaonReceive(int packetSize) {
+void onLoRaReceive(int packetSize) {
   if (packetSize == 2) {
-
+    // gateAddress not used to check if message is for gate
     int target = LoRa.read();
     int state = LoRa.read();
 
