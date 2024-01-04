@@ -71,19 +71,21 @@ void loop() {
 }
 
 void onLoRaonReceive(int packetSize) {
-  //digitalWrite(LED_BUILTIN, HIGH);
-  if (packetSize == 0) return;  // if there's no packet, return
+  if (packetSize == 2) {
 
-  int target = LoRa.read();
-  int state = LoRa.read();
+    int target = LoRa.read();
+    int state = LoRa.read();
 
-  //Serial.println("Received from Valves: ");
-  Serial.print(target);
-  Serial.print(state);
-  Serial.println();
+    //Serial.println("Received from Valves: ");
+    Serial.print(target);
+    Serial.print(state);
+    Serial.println();
 
-  //Serial.print("RSSI: ");
-  //Serial.println(LoRa.packetRssi());
-  //delay(1000);
-  //digitalWrite(LED_BUILTIN, LOW);
+    //Serial.print("RSSI: ");
+    //Serial.println(LoRa.packetRssi());
+    //delay(1000);
+    //digitalWrite(LED_BUILTIN, LOW);
+  } else {
+    return;  // if there's no packet or a packet with a wrong size, return
+  }
 }
