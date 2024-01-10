@@ -52,32 +52,34 @@ void loop() {
 
 void onLoRaReceive(int packetSize) {
   //digitalWrite(LED_BUILTIN, HIGH);
-  if (packetSize == 0) return;  // if there's no packet, return
+  if (packetSize == 2) {
+    byte target = LoRa.read();
+    byte state = LoRa.read();
 
-  byte target = LoRa.read();
-  byte state = LoRa.read();
+    Serial.println("Target: ");
+    Serial.println(target);
+    Serial.println("State: ");
+    Serial.println(state);
 
-  Serial.println("Target: ");
-  Serial.println(target);
-  Serial.println("State: ");
-  Serial.println(state);
-
-  if (target == valve1Address) {
-    Serial.println("V1");
-    digitalWrite(pinV1, state);
-    confirm_cmd(target, state);
-  } else if (target == valve2Address) {
-    Serial.println("V2");
-    digitalWrite(pinV2, state);
-    confirm_cmd(target, state);
+    if (target == valve1Address) {
+      Serial.println("V1");
+      digitalWrite(pinV1, state);
+      confirm_cmd(target, state);
+    } else if (target == valve2Address) {
+      Serial.println("V2");
+      digitalWrite(pinV2, state);
+      confirm_cmd(target, state);
+    } else {
+      Serial.println("Error");
+      return;  // skip rest of function
+    }
+    //delay(1000);
+    //digitalWrite(LED_BUILTIN, LOW);
+    //Serial.print("RSSI: ");
+    //Serial.println(LoRa.packetRssi());
   } else {
-    Serial.println("Error");
-    return;  // skip rest of function
+    return;  // if there's no packet or a packet with a wrong size, return
   }
-  //delay(1000);
-  //digitalWrite(LED_BUILTIN, LOW);
-  //Serial.print("RSSI: ");
-  //Serial.println(LoRa.packetRssi());
 }
 
 void confirm_cmd(byte target, byte state) {

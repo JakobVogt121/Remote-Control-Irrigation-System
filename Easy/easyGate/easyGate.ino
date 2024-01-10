@@ -6,14 +6,14 @@
 Erhält von Node-Red über Serielle Schnittstelle:
   10: Ventil 1 aus
   11: Ventil 1 an
-  20: Ventil 1 aus
-  21: Ventil 1 an
+  20: Ventil 2 aus
+  21: Ventil 2 an
 und sendet die Daten über LoRa weiter an easyValves.
 Bekommt Daten von easyValves über LoRa zurück und sendet diese wieder über Serielle Schnittstelle an Node-Red
   10: Ventil 1 aus
   11: Ventil 1 an
-  20: Ventil 1 aus
-  21: Ventil 1 an
+  20: Ventil 2 aus
+  21: Ventil 2 an
 */
 
 #include <LoRa.h>
@@ -67,23 +67,25 @@ void loop() {
     LoRa.endPacket();
   }
 
-  onLoRaonReceive(LoRa.parsePacket());
+  onLoRaReceive(LoRa.parsePacket());
 }
 
-void onLoRaonReceive(int packetSize) {
-  //digitalWrite(LED_BUILTIN, HIGH);
-  if (packetSize == 0) return;  // if there's no packet, return
+void onLoRaReceive(int packetSize) {
+  if (packetSize == 2) {
+    // gateAddress not used to check if message is for gate
+    int target = LoRa.read();
+    int state = LoRa.read();
 
-  int target = LoRa.read();
-  int state = LoRa.read();
+    //Serial.println("Received from Valves: ");
+    Serial.print(target);
+    Serial.print(state);
+    Serial.println();
 
-  //Serial.println("Received from Valves: ");
-  Serial.print(target);
-  Serial.print(state);
-  Serial.println();
-
-  //Serial.print("RSSI: ");
-  //Serial.println(LoRa.packetRssi());
-  //delay(1000);
-  //digitalWrite(LED_BUILTIN, LOW);
+    //Serial.print("RSSI: ");
+    //Serial.println(LoRa.packetRssi());
+    //delay(1000);
+    //digitalWrite(LED_BUILTIN, LOW);
+  } else {
+    return;  // if there's no packet or a packet with a wrong size, return
+  }
 }

@@ -1,6 +1,6 @@
 [
     {
-        "id": "c3edba2ed3c774af",
+        "id": "823e8b7aabfc2916",
         "type": "tab",
         "label": "Bewässerung",
         "disabled": false,
@@ -8,19 +8,19 @@
         "env": []
     },
     {
-        "id": "e8296334b320df3e",
+        "id": "8ff0f9525fc1027c",
         "type": "serial out",
-        "z": "c3edba2ed3c774af",
+        "z": "823e8b7aabfc2916",
         "name": "",
         "serial": "9cd28dcf27b3a192",
-        "x": 540,
-        "y": 140,
+        "x": 550,
+        "y": 100,
         "wires": []
     },
     {
-        "id": "a253e69280a3b3f7",
+        "id": "456e46b83a87721b",
         "type": "function",
-        "z": "c3edba2ed3c774af",
+        "z": "823e8b7aabfc2916",
         "name": "create Msg V1",
         "func": "/*\n  10: Ventil 1 aus\n  11: Ventil 1 an\n*/\nif(msg.payload==true){\n    msg.payload = 11;\n}else{\n    msg.payload = 10;\n}\nreturn msg;",
         "outputs": 1,
@@ -29,18 +29,18 @@
         "finalize": "",
         "libs": [],
         "x": 340,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
-                "e8296334b320df3e",
-                "6308d534c4acb3c1"
+                "8ff0f9525fc1027c",
+                "f80214abc214e872"
             ]
         ]
     },
     {
-        "id": "1987ec96ce23dfa7",
+        "id": "2644aed6e70a265d",
         "type": "function",
-        "z": "c3edba2ed3c774af",
+        "z": "823e8b7aabfc2916",
         "name": "create Msg V2",
         "func": "/*\n  20: Ventil 1 aus\n  21: Ventil 1 an\n*/\nif(msg.payload==true){\n    msg.payload = 21;\n}else{\n    msg.payload = 20;\n}\nreturn msg;",
         "outputs": 1,
@@ -49,37 +49,37 @@
         "finalize": "",
         "libs": [],
         "x": 340,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
-                "e8296334b320df3e",
-                "6308d534c4acb3c1"
+                "8ff0f9525fc1027c",
+                "f80214abc214e872"
             ]
         ]
     },
     {
-        "id": "076926497e0bfcbb",
+        "id": "334dd460cc478c6d",
         "type": "serial in",
-        "z": "c3edba2ed3c774af",
+        "z": "823e8b7aabfc2916",
         "name": "",
         "serial": "9cd28dcf27b3a192",
-        "x": 130,
-        "y": 280,
+        "x": 110,
+        "y": 340,
         "wires": [
             [
-                "6151913f76291704",
-                "984c3de79493a7c4"
+                "9ce74cc0bc7abe45",
+                "0d0053b8a7178afa"
             ]
         ]
     },
     {
-        "id": "391c351ea7361f86",
+        "id": "b29d9a93e41e97b0",
         "type": "ui_switch",
-        "z": "c3edba2ed3c774af",
+        "z": "823e8b7aabfc2916",
         "name": "",
         "label": "V2",
         "tooltip": "",
-        "group": "1ec0ff4e11c44f79",
+        "group": "fc685e33b3c8a824",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -98,21 +98,21 @@
         "offcolor": "",
         "animate": false,
         "x": 130,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
-                "1987ec96ce23dfa7"
+                "2644aed6e70a265d"
             ]
         ]
     },
     {
-        "id": "f8e5b65ebf727408",
+        "id": "d7de037411c74132",
         "type": "ui_switch",
-        "z": "c3edba2ed3c774af",
+        "z": "823e8b7aabfc2916",
         "name": "",
         "label": "V1",
         "tooltip": "",
-        "group": "1ec0ff4e11c44f79",
+        "group": "fc685e33b3c8a824",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -131,41 +131,166 @@
         "offcolor": "",
         "animate": false,
         "x": 130,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
-                "a253e69280a3b3f7"
+                "456e46b83a87721b"
             ]
         ]
     },
     {
-        "id": "6151913f76291704",
+        "id": "9ce74cc0bc7abe45",
         "type": "function",
-        "z": "c3edba2ed3c774af",
+        "z": "823e8b7aabfc2916",
         "name": "split msg",
-        "func": "const firstChar = msg.payload[0];\nconst secondChar = msg.payload[1];\n\nmsg.payload = secondChar;\n\nif (firstChar === \"1\") {\n    return [null, msg];\n} else if (firstChar === \"2\") {\n    return [msg, null];\n} ",
-        "outputs": 2,
+        "func": "// split messages by length and first Char\n// can be reduced to\n//const firstChar = msg.payload[0];\n//const secondChar = msg.payload[1];\n//msg.payload = secondChar;\n//if (firstChar === \"1\") {\n //   return [null, msg];\n//} else if (firstChar === \"2\") {\n//    return [msg, null];\n//} \n\nconst firstChar = msg.payload[0];\nconst secondChar = msg.payload[1];\n\n//msg.payload = secondChar;\n\nif (msg.payload.length == 4){\n    if (firstChar === \"1\") {\n        msg.length = msg.payload.length;\n        msg.payload = secondChar;\n        return [msg, null, null];\n    } else if (firstChar === \"2\") {\n        msg.length = msg.payload.length;\n        msg.payload = secondChar;\n        return [null, msg, null];\n    }\n}\n\nmsg.payload = msg.payload;\nmsg.length = msg.payload.length;\nreturn [null, null, msg];",
+        "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 280,
-        "y": 280,
+        "y": 340,
         "wires": [
             [
-                "b7dce0ff6887c74a"
+                "c54878b892f94242",
+                "bcec7946e7631b7d",
+                "5a9f7c73888755f6"
             ],
             [
-                "c507bc557cdbb115"
+                "b86b0abce6d5d99d",
+                "661d05cbcbdae801",
+                "db1a808c0fce87af"
+            ],
+            [
+                "cb8bf8c20be9b091",
+                "880220a4d599e410"
             ]
         ]
     },
     {
-        "id": "b7dce0ff6887c74a",
+        "id": "0d0053b8a7178afa",
+        "type": "debug",
+        "z": "823e8b7aabfc2916",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f80214abc214e872",
+        "type": "debug",
+        "z": "823e8b7aabfc2916",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b86b0abce6d5d99d",
+        "type": "debug",
+        "z": "823e8b7aabfc2916",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c54878b892f94242",
+        "type": "debug",
+        "z": "823e8b7aabfc2916",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "cb8bf8c20be9b091",
+        "type": "debug",
+        "z": "823e8b7aabfc2916",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "880220a4d599e410",
+        "type": "debug",
+        "z": "823e8b7aabfc2916",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "length",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "661d05cbcbdae801",
+        "type": "debug",
+        "z": "823e8b7aabfc2916",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "length",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "db1a808c0fce87af",
         "type": "ui_gauge",
-        "z": "c3edba2ed3c774af",
-        "name": "",
-        "group": "e97917d190db686a",
+        "z": "823e8b7aabfc2916",
+        "name": "V2",
+        "group": "fecf2a663e5ec9b9",
         "order": 4,
         "width": 1,
         "height": 1,
@@ -183,15 +308,15 @@
         "seg1": "",
         "seg2": "",
         "x": 530,
-        "y": 240,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "c507bc557cdbb115",
+        "id": "bcec7946e7631b7d",
         "type": "ui_gauge",
-        "z": "c3edba2ed3c774af",
-        "name": "",
-        "group": "e97917d190db686a",
+        "z": "823e8b7aabfc2916",
+        "name": "V1",
+        "group": "fecf2a663e5ec9b9",
         "order": 2,
         "width": 1,
         "height": 1,
@@ -209,57 +334,42 @@
         "seg1": "",
         "seg2": "",
         "x": 530,
-        "y": 320,
+        "y": 300,
         "wires": []
     },
     {
-        "id": "984c3de79493a7c4",
+        "id": "5a9f7c73888755f6",
         "type": "debug",
-        "z": "c3edba2ed3c774af",
-        "name": "debug 8",
+        "z": "823e8b7aabfc2916",
+        "name": "debug 15",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "length",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 280,
+        "x": 540,
         "y": 240,
         "wires": []
     },
     {
-        "id": "6308d534c4acb3c1",
-        "type": "debug",
-        "z": "c3edba2ed3c774af",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "cdfb3b6e903c3e14",
+        "id": "651642621c5da823",
         "type": "ui_spacer",
-        "z": "c3edba2ed3c774af",
+        "z": "823e8b7aabfc2916",
         "name": "spacer",
-        "group": "e97917d190db686a",
+        "group": "fecf2a663e5ec9b9",
         "order": 1,
         "width": 1,
         "height": 1
     },
     {
-        "id": "e0fb6fdf74f0a83c",
+        "id": "e08692aa15c83bbd",
         "type": "ui_spacer",
-        "z": "c3edba2ed3c774af",
+        "z": "823e8b7aabfc2916",
         "name": "spacer",
-        "group": "e97917d190db686a",
+        "group": "fecf2a663e5ec9b9",
         "order": 3,
         "width": 1,
         "height": 1
@@ -267,7 +377,7 @@
     {
         "id": "9cd28dcf27b3a192",
         "type": "serial-port",
-        "serialport": "COM3",
+        "serialport": "/dev/ttyUSB0",
         "serialbaud": "9600",
         "databits": "8",
         "parity": "none",
@@ -284,27 +394,27 @@
         "responsetimeout": "10000"
     },
     {
-        "id": "1ec0ff4e11c44f79",
+        "id": "fc685e33b3c8a824",
         "type": "ui_group",
         "name": "Steuerung",
-        "tab": "f005a1bd4c96ac8f",
+        "tab": "f9db1b10d6969bf9",
         "order": 1,
         "disp": true,
         "width": 2,
         "collapse": false
     },
     {
-        "id": "e97917d190db686a",
+        "id": "fecf2a663e5ec9b9",
         "type": "ui_group",
         "name": "Rückmeldung",
-        "tab": "f005a1bd4c96ac8f",
+        "tab": "f9db1b10d6969bf9",
         "order": 2,
         "disp": true,
         "width": 2,
         "collapse": false
     },
     {
-        "id": "f005a1bd4c96ac8f",
+        "id": "f9db1b10d6969bf9",
         "type": "ui_tab",
         "name": "Für Mama",
         "icon": "dashboard",
