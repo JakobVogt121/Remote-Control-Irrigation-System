@@ -6,13 +6,13 @@
 Erhält Daten über LoRa von easyGate:
   10: Ventil 1 aus
   11: Ventil 1 an
-  20: Ventil 1 aus
-  21: Ventil 1 an
+  20: Ventil 2 aus
+  21: Ventil 2 an
 und sendet Bestätigung über LoRa an easyGate zurück:
   10: Ventil 1 aus
   11: Ventil 1 an
-  20: Ventil 1 aus
-  21: Ventil 1 an
+  20: Ventil 2 aus
+  21: Ventil 2 an
 */
 
 #include <LoRa.h>
