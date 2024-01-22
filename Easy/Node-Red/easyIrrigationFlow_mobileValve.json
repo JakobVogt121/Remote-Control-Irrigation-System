@@ -1,0 +1,579 @@
+[
+    {
+        "id": "3f4fd17bc0282f60",
+        "type": "tab",
+        "label": "Bewässerung",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f8914cbcad76bede",
+        "type": "serial out",
+        "z": "3f4fd17bc0282f60",
+        "name": "",
+        "serial": "9cd28dcf27b3a192",
+        "x": 730,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "baf08812d2760fd3",
+        "type": "function",
+        "z": "3f4fd17bc0282f60",
+        "name": "create Msg V1",
+        "func": "/*\n  10: Ventil 1 aus\n  11: Ventil 1 an\n*/\nif(msg.payload==true){\n    msg.payload = 11;\n}else{\n    msg.payload = 10;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 60,
+        "wires": [
+            [
+                "f8914cbcad76bede"
+            ]
+        ]
+    },
+    {
+        "id": "9bcaa430f0aac802",
+        "type": "function",
+        "z": "3f4fd17bc0282f60",
+        "name": "create Msg V2",
+        "func": "/*\n  20: Ventil 1 aus\n  21: Ventil 1 an\n*/\nif(msg.payload==true){\n    msg.payload = 21;\n}else{\n    msg.payload = 20;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "f8914cbcad76bede"
+            ]
+        ]
+    },
+    {
+        "id": "d86edf024cdd1339",
+        "type": "serial in",
+        "z": "3f4fd17bc0282f60",
+        "name": "",
+        "serial": "9cd28dcf27b3a192",
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "8426d5d209e6e7dc",
+                "5434af038bfa58ad"
+            ]
+        ]
+    },
+    {
+        "id": "f28def30ddd02fd8",
+        "type": "ui_switch",
+        "z": "3f4fd17bc0282f60",
+        "name": "",
+        "label": "V2",
+        "tooltip": "",
+        "group": "fc685e33b3c8a824",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "9bcaa430f0aac802"
+            ]
+        ]
+    },
+    {
+        "id": "c89e3ef51fab2ed1",
+        "type": "ui_switch",
+        "z": "3f4fd17bc0282f60",
+        "name": "",
+        "label": "V1",
+        "tooltip": "",
+        "group": "fc685e33b3c8a824",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "baf08812d2760fd3"
+            ]
+        ]
+    },
+    {
+        "id": "8426d5d209e6e7dc",
+        "type": "function",
+        "z": "3f4fd17bc0282f60",
+        "name": "split msg",
+        "func": "// split messages by length and first Char\n// can be reduced to\n//const firstChar = msg.payload[0];\n//const secondChar = msg.payload[1];\n//msg.payload = secondChar;\n//if (firstChar === \"1\") {\n //   return [null, msg];\n//} else if (firstChar === \"2\") {\n//    return [msg, null];\n//} \n\nconst firstChar = msg.payload[0];\nconst secondChar = msg.payload[1];\n\n//msg.payload = secondChar;\n\nif (msg.payload.length == 4){\n    if (firstChar === \"1\") {\n        msg.length = msg.payload.length;\n        msg.payload = secondChar;\n        return [msg, null, null, null];\n    } else if (firstChar === \"2\") {\n        msg.length = msg.payload.length;\n        msg.payload = secondChar;\n        return [null, msg, null, null];\n    } else if (firstChar === \"3\") {\n        msg.length = msg.payload.length;\n        msg.payload = secondChar;\n        return [null, null, msg, null];\n    }\n}\n\nmsg.payload = msg.payload;\nmsg.length = msg.payload.length;\nreturn [null, null, null, msg];",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "cf7f3dd4613b691c"
+            ],
+            [
+                "42bc832c898b15f0"
+            ],
+            [
+                "bd464650c0489855"
+            ],
+            [
+                "3b959d85a5d6e57c",
+                "28c7ccc4a4f7d168"
+            ]
+        ]
+    },
+    {
+        "id": "5434af038bfa58ad",
+        "type": "debug",
+        "z": "3f4fd17bc0282f60",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "3b959d85a5d6e57c",
+        "type": "debug",
+        "z": "3f4fd17bc0282f60",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "28c7ccc4a4f7d168",
+        "type": "debug",
+        "z": "3f4fd17bc0282f60",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "length",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "42bc832c898b15f0",
+        "type": "ui_gauge",
+        "z": "3f4fd17bc0282f60",
+        "name": "V2",
+        "group": "fecf2a663e5ec9b9",
+        "order": 5,
+        "width": 1,
+        "height": 1,
+        "gtype": "donut",
+        "title": "",
+        "label": "",
+        "format": "",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#c0c4c0",
+            "#e6e600",
+            "#65cb3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "cf7f3dd4613b691c",
+        "type": "ui_gauge",
+        "z": "3f4fd17bc0282f60",
+        "name": "V1",
+        "group": "fecf2a663e5ec9b9",
+        "order": 2,
+        "width": 1,
+        "height": 1,
+        "gtype": "donut",
+        "title": "",
+        "label": "",
+        "format": "",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#c0c4c0",
+            "#e6e600",
+            "#65cb3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "93d5aa2afc8fac8f",
+        "type": "link in",
+        "z": "3f4fd17bc0282f60",
+        "name": "link in 1",
+        "links": [
+            "6e25443cb8e666c5"
+        ],
+        "x": 405,
+        "y": 180,
+        "wires": [
+            [
+                "3c5cfc23b4837ef9"
+            ]
+        ]
+    },
+    {
+        "id": "0ba28147c8f31aae",
+        "type": "ui_switch",
+        "z": "3f4fd17bc0282f60",
+        "name": "",
+        "label": "V3",
+        "tooltip": "",
+        "group": "fc685e33b3c8a824",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "1afa2ba880ad795e"
+            ]
+        ]
+    },
+    {
+        "id": "1afa2ba880ad795e",
+        "type": "function",
+        "z": "3f4fd17bc0282f60",
+        "name": "create Msg V3",
+        "func": "var count;\n/*\n  30: Ventil 3 aus\n  31: Ventil 3 an\n*/\nif(msg.payload==true){\n    flow.set('count', 31);\n}else{\n    flow.set('count', 30);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "216449e9f9b02419"
+            ]
+        ]
+    },
+    {
+        "id": "216449e9f9b02419",
+        "type": "debug",
+        "z": "3f4fd17bc0282f60",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "3c5cfc23b4837ef9",
+        "type": "function",
+        "z": "3f4fd17bc0282f60",
+        "name": "RespCockCrow",
+        "func": "/* \nwhenever mobile valve 3 sends a cockCorw (39)/is asking for the state, \nthis node gets triggerd\nand assignes the desired state of valve 3 from switch 3:\n31: on      --> open\n30: off     --> close\n* if nothing is assigned close valve\n*/ \nmsg.payload=flow.get('count') || 30;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 180,
+        "wires": [
+            [
+                "f8914cbcad76bede",
+                "87468275191e3978"
+            ]
+        ]
+    },
+    {
+        "id": "87468275191e3978",
+        "type": "debug",
+        "z": "3f4fd17bc0282f60",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "bd464650c0489855",
+        "type": "switch",
+        "z": "3f4fd17bc0282f60",
+        "name": "stateSelect",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 570,
+        "y": 500,
+        "wires": [
+            [
+                "3de5b77f30469298"
+            ],
+            [
+                "3de5b77f30469298"
+            ],
+            [
+                "6e25443cb8e666c5"
+            ]
+        ],
+        "info": "For mobile valve there are 3 states:\n39: cockCrow (valve asks for state)\n30: close\n31: open"
+    },
+    {
+        "id": "6e25443cb8e666c5",
+        "type": "link out",
+        "z": "3f4fd17bc0282f60",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "93d5aa2afc8fac8f"
+        ],
+        "x": 715,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "3de5b77f30469298",
+        "type": "ui_gauge",
+        "z": "3f4fd17bc0282f60",
+        "name": "V3",
+        "group": "fecf2a663e5ec9b9",
+        "order": 8,
+        "width": 1,
+        "height": 1,
+        "gtype": "donut",
+        "title": "",
+        "label": "",
+        "format": "",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#c0c4c0",
+            "#e6e600",
+            "#ff0000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 750,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ea65ad51bde05112",
+        "type": "ui_spacer",
+        "z": "3f4fd17bc0282f60",
+        "name": "spacer",
+        "group": "fecf2a663e5ec9b9",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "4c61158f25a51d26",
+        "type": "ui_spacer",
+        "z": "3f4fd17bc0282f60",
+        "name": "spacer",
+        "group": "fecf2a663e5ec9b9",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7433da5fd871db62",
+        "type": "ui_spacer",
+        "z": "3f4fd17bc0282f60",
+        "name": "spacer",
+        "group": "fecf2a663e5ec9b9",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8cdedbdc1dc5fe1a",
+        "type": "ui_spacer",
+        "z": "3f4fd17bc0282f60",
+        "name": "spacer",
+        "group": "fecf2a663e5ec9b9",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "cd5cfe90cd2c3419",
+        "type": "ui_spacer",
+        "z": "3f4fd17bc0282f60",
+        "name": "spacer",
+        "group": "fecf2a663e5ec9b9",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "48b4f958e95fe8d4",
+        "type": "ui_spacer",
+        "z": "3f4fd17bc0282f60",
+        "name": "spacer",
+        "group": "fecf2a663e5ec9b9",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "9cd28dcf27b3a192",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "fc685e33b3c8a824",
+        "type": "ui_group",
+        "name": "Steuerung",
+        "tab": "f9db1b10d6969bf9",
+        "order": 1,
+        "disp": true,
+        "width": 3,
+        "collapse": false
+    },
+    {
+        "id": "fecf2a663e5ec9b9",
+        "type": "ui_group",
+        "name": "Rückmeldung",
+        "tab": "f9db1b10d6969bf9",
+        "order": 2,
+        "disp": true,
+        "width": 3,
+        "collapse": false
+    },
+    {
+        "id": "f9db1b10d6969bf9",
+        "type": "ui_tab",
+        "name": "Für Mama",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
