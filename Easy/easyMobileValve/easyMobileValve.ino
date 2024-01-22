@@ -22,7 +22,8 @@
 #define rst 14
 #define dio0 26
 
-#define pinValve 32
+#define pinValveOn 32
+#define pinValveOff 33
 
 byte valve3Address = 3;
 byte stateCockCrow = 9;
@@ -34,7 +35,8 @@ void setup() {
   //pinMode(LED_BUILTIN, OUTPUT);  // for debugging/visualization
   esp_sleep_enable_timer_wakeup(5000000);
 
-  pinMode(pinValve, OUTPUT);
+  pinMode(pinValveOn, OUTPUT);
+  pinMode(pinValveOff, OUTPUT);
   // Serial nur für debugging
   Serial.begin(9600);
   while (!Serial)
@@ -55,13 +57,13 @@ void setup() {
 
 void loop() {
 
-  for (int i = 1; i <= 3; i++) {    
+  for (int i = 1; i <= 3; i++) {
     cockCrow();
     if (rx2byteMsg == true) {
       i = 3;
     }
     LoRa.receive();
-    delay(500); // random delay zwischen .. und .. einführen
+    delay(500);  // random delay zwischen .. und .. einführen
   }
   if (rx2byteMsg == true) {
     Serial.println("rxValve: ");
@@ -70,9 +72,13 @@ void loop() {
     Serial.println(rxValveState);
     if (rxValve == valve3Address) {
       Serial.println("V3");
-      digitalWrite(pinValve, rxValveState);
+      if (rxValveState == 1) {
+        digitalWrite(pinValveOn, HIGH);
+      } else if (rxValveState == 0) {
+        digitalWrite(pinValveOff, HIGH);
+      }
       confirm_cmd(rxValve, rxValveState);
-      delay(3000);
+      delay(5000);
       esp_deep_sleep_start();
     } else {
       Serial.println("not for me");
