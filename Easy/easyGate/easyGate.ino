@@ -8,12 +8,20 @@ Erhält von Node-Red über Serielle Schnittstelle:
   11: Ventil 1 an
   20: Ventil 2 aus
   21: Ventil 2 an
+  30: Ventil 3 aus
+  31: Ventil 3 an
 und sendet die Daten über LoRa weiter an easyValves.
 Bekommt Daten von easyValves über LoRa zurück und sendet diese wieder über Serielle Schnittstelle an Node-Red
   10: Ventil 1 aus
   11: Ventil 1 an
   20: Ventil 2 aus
   21: Ventil 2 an
+  30: Ventil 3 aus
+  31: Ventil 3 an
+Besonderheit mobile Valve 3:
+die Kommunikation initiiert das mobile Ventil, sobald es aus dem Schlaf erwacht. Es fragt seinen Status durch:
+  39: CockCrow (3x)
+an. Das Gate  hört das Hahnenkrähen und schickt es (39) 1x zu Node-Red weiter.
 */
 
 #include <LoRa.h>
@@ -24,16 +32,15 @@ Bekommt Daten von easyValves über LoRa zurück und sendet diese wieder über Se
 #define dio0 26
 
 //const byte gateAddress = 0;
-//const byte valve1Address = 1;
-//const byte valve2Address = 2;
-
 // receiver Valve
 byte rxValve = 0;
 byte rxValveState;
 // transmitter/sender Valve
 byte txValve;
 byte txValveState;
-bool txValveFlag = false; // to register cockCrow of txValve only once
+byte txValveLastState = 0;
+byte txValveCurrentState = 0;
+bool txValveFlag = false;  // to register cockCrow of txValve only once
 // --> gets raised, when State of sender Valve changes
 
 void setup() {
@@ -51,8 +58,7 @@ void setup() {
   }
   delay(1000);
   pinMode(LED_BUILTIN, OUTPUT);  // for debugging/visualization
-  Serial.println("Gate ready");
-
+  //Serial.println("Gate ready");
   LoRa.receive();
   // Register a callback function for when a packet is received using interrupt pin on the dio0
   LoRa.onReceive(onReceive);
@@ -77,28 +83,12 @@ void loop() {
     LoRa.write(rxValve);
     LoRa.write(rxValveState);
     LoRa.endPacket();
+    LoRa.receive();
   }
-  //(onReceive);
-  //onLoRaReceive(LoRa.parsePacket());
+
   if (txValveFlag == true) {
-    Serial.print(txValve);
-    Serial.print(txValveState);
-    Serial.println();
-
-    Serial.print(3);
-    Serial.print(1);
-    Serial.println();
-
-    LoRa.beginPacket();
-    LoRa.write(3);
-    LoRa.write(1);
-    LoRa.endPacket();
-
-    txValveFlag = false;
+    send2RPI();
   }
-  //Serial.print(txValve);
-  //Serial.print(txValveState);
-  //Serial.println();
 }
 
 void onReceive(int packetSize) {
@@ -107,18 +97,19 @@ void onReceive(int packetSize) {
     // gateAddress not used to check if message is for gate
     txValve = LoRa.read();
     txValveState = LoRa.read();
-    txValveFlag = true;
-
-    //Serial.println("Received from Valves: ");
-    //Serial.print(target);
-    //Serial.print(state);
-    //Serial.println();
-
-    //Serial.print("RSSI: ");
-    //Serial.println(LoRa.packetRssi());
-    //delay(1000);
-    //digitalWrite(LED_BUILTIN, LOW);
+    txValveCurrentState = 10 * txValve + txValveState;
+    if (txValveCurrentState != txValveLastState) {
+      txValveFlag = true;
+    }
+    txValveLastState = txValveCurrentState;
   } else {
     return;  // if there's no packet or a packet with a wrong size, return
   }
+}
+
+void send2RPI() {
+  Serial.print(txValve);
+  Serial.print(txValveState);
+  Serial.println();
+  txValveFlag = false;
 }

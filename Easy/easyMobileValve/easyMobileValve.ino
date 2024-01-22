@@ -12,10 +12,8 @@
   30: Ventil 3 aus
   31: Ventil 3 an
 - sendet Bestätigung über LoRa an easyGate zurück:
-  10: Ventil 1 aus
-  11: Ventil 1 an
-  20: Ventil 2 aus
-  21: Ventil 2 an
+  30: Ventil 3 aus
+  31: Ventil 3 an
 */
 
 #include <LoRa.h>
@@ -26,8 +24,11 @@
 
 #define pinValve 32
 
-//byte gateAddress = 0;
 byte valve3Address = 3;
+byte stateCockCrow = 9;
+bool rx2byteMsg = false;
+byte rxValve = 0;
+byte rxValveState = 0;
 
 void setup() {
   //pinMode(LED_BUILTIN, OUTPUT);  // for debugging/visualization
@@ -41,62 +42,69 @@ void setup() {
   SPI.begin(5, 19, 27, 18);
   LoRa.setPins(ss, rst, dio0);
   if (!LoRa.begin(868E6)) {
-    Serial.println("Start of LoRa failed!");
+    //Serial.println("Start of LoRa failed!");
     while (1)
       ;
   }
   delay(1000);
+  LoRa.receive();
   Serial.println("mobile Valve 3 ready");
   // Register a callback function for when a packet is received using interrupt pin on the dio0
   LoRa.onReceive(onReceive);
 }
 
 void loop() {
-  for (int i = 0; i <= 10; i++) {
+
+  for (int i = 1; i <= 3; i++) {    
     cockCrow();
+    if (rx2byteMsg == true) {
+      i = 3;
+    }
     LoRa.receive();
-    delay(500);
+    delay(500); // random delay zwischen .. und .. einführen
+  }
+  if (rx2byteMsg == true) {
+    Serial.println("rxValve: ");
+    Serial.println(rxValve);
+    Serial.println("rxValveState: ");
+    Serial.println(rxValveState);
+    if (rxValve == valve3Address) {
+      Serial.println("V3");
+      digitalWrite(pinValve, rxValveState);
+      confirm_cmd(rxValve, rxValveState);
+      delay(3000);
+      esp_deep_sleep_start();
+    } else {
+      Serial.println("not for me");
+    }
+    rx2byteMsg = false;
   }
   esp_deep_sleep_start();
 }
 
 void cockCrow() {
-  Serial.print(3);
-  Serial.print(9);
+  Serial.print(valve3Address);
+  Serial.print(stateCockCrow);
   Serial.println();
   LoRa.beginPacket();
-  LoRa.write(3);  // valve 3
-  LoRa.write(9);  // state 9 = advertising
+  LoRa.write(valve3Address);  // valve 3
+  LoRa.write(stateCockCrow);  // state 9 = advertising
   LoRa.endPacket();
 }
 
 void onReceive(int packetSize) {
   //digitalWrite(LED_BUILTIN, HIGH);
   if (packetSize == 2) {
-    byte rxValve = LoRa.read();
-    byte rxValveState = LoRa.read();
-
-    Serial.println("rxValve: ");
-    Serial.println(rxValve);
-    Serial.println("rxValveState: ");
-    Serial.println(rxValveState);
-
-    if (rxValve == valve3Address) {
-      Serial.println("V3");
-      digitalWrite(pinValve, rxValveState);
-      confirm_cmd(rxValve, rxValveState);
-      esp_deep_sleep_start();
-    } else {
-      Serial.println("Error");
-      return;  // skip rest of function
-    }
+    rxValve = LoRa.read();
+    rxValveState = LoRa.read();
+    rx2byteMsg = true;
   } else {
     return;  // if there's no packet or a packet with a wrong size, return
   }
 }
 
 void confirm_cmd(byte rxValve, byte rxValveState) {
-  delay(500);
+  delay(100);
   Serial.print(rxValve);
   Serial.print(rxValveState);
   Serial.println();

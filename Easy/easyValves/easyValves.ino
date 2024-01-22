@@ -24,7 +24,6 @@ und sendet Bestätigung über LoRa an easyGate zurück:
 #define pinV1 32
 #define pinV2 33
 
-byte gateAddress = 0;
 byte valve1Address = 1;
 byte valve2Address = 2;
 
@@ -43,7 +42,7 @@ void setup() {
       ;
   }
   delay(1000);
-  Serial.println("Valves ready");
+  Serial.println("Valve 1, 2 ready");
 }
 
 void loop() {
@@ -53,42 +52,39 @@ void loop() {
 void onLoRaReceive(int packetSize) {
   //digitalWrite(LED_BUILTIN, HIGH);
   if (packetSize == 2) {
-    byte target = LoRa.read();
-    byte state = LoRa.read();
+    byte rxValve = LoRa.read();
+    byte rxValveState = LoRa.read();
 
-    Serial.println("Target: ");
-    Serial.println(target);
-    Serial.println("State: ");
-    Serial.println(state);
+    Serial.println("rxValve: ");
+    Serial.println(rxValve);
+    Serial.println("rxValveState: ");
+    Serial.println(rxValveState);
 
-    if (target == valve1Address) {
+    if (rxValve == valve1Address) {
       Serial.println("V1");
-      digitalWrite(pinV1, state);
-      confirm_cmd(target, state);
-    } else if (target == valve2Address) {
+      digitalWrite(pinV1, rxValveState);
+      confirm_cmd(rxValve, rxValveState);
+    } else if (rxValve == valve2Address) {
       Serial.println("V2");
-      digitalWrite(pinV2, state);
-      confirm_cmd(target, state);
+      digitalWrite(pinV2, rxValveState);
+      confirm_cmd(rxValve, rxValveState);
     } else {
-      Serial.println("Error");
+      Serial.println("not for me");
       return;  // skip rest of function
     }
-    //delay(1000);
     //digitalWrite(LED_BUILTIN, LOW);
-    //Serial.print("RSSI: ");
-    //Serial.println(LoRa.packetRssi());
   } else {
     return;  // if there's no packet or a packet with a wrong size, return
   }
 }
 
-void confirm_cmd(byte target, byte state) {
-  delay(1000);
-  Serial.print(target);
-  Serial.print(state);
+void confirm_cmd(byte rxValve, byte rxValveState) {
+  delay(100);
+  Serial.print(rxValve);
+  Serial.print(rxValveState);
   Serial.println();
   LoRa.beginPacket();
-  LoRa.write(target);
-  LoRa.write(state);
+  LoRa.write(rxValve);
+  LoRa.write(rxValveState);
   LoRa.endPacket();
 }
