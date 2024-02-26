@@ -22,6 +22,9 @@
 #define rst 14
 #define dio0 26
 
+#define uS_TO_S_FACTOR 1000000  // Conversion factor for micro seconds to seconds
+#define TIME_TO_SLEEP  3        // Time ESP32 will go to sleep (in seconds)
+
 #define pinValveOn 32
 #define pinValveOff 33
 const int moveValveDelay = 3000; // dleay to wait until valve has been opened/closed
@@ -34,7 +37,7 @@ byte rxValveState = 0;
 
 void setup() {
   //pinMode(LED_BUILTIN, OUTPUT);  // for debugging/visualization
-  esp_sleep_enable_timer_wakeup(5000000);
+  esp_sleep_enable_timer_wakeup(uS_TO_S_FACTOR * TIME_TO_SLEEP);
 
   pinMode(pinValveOn, OUTPUT);
   pinMode(pinValveOff, OUTPUT);
