@@ -1,0 +1,5910 @@
+[
+    {
+        "id": "062f09541c161fc1",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0bbcfaa41c6f38f7",
+        "type": "ui_dropdown",
+        "z": "062f09541c161fc1",
+        "name": "start1",
+        "label": "start1",
+        "tooltip": "set up start Time",
+        "place": "Select option",
+        "group": "6f7ec007a94dc1fd",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "--:--",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:45",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "480449d5ab81a139",
+                "0e8d6579ac8d5374"
+            ]
+        ]
+    },
+    {
+        "id": "3a7cec556f46d8fd",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "480449d5ab81a139",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "setStartDate",
+        "func": "// get set up Date\nvar year = flow.get('setYear') || 0;\nvar month = flow.get('setMonth') || 0;\nvar day = flow.get('setDay') || 0;\n\n// get hours and minutes from drop down menu\nvar time = msg.payload.split(':');\nvar hours = time[0];\nvar minutes = time[1];\n\n//pass in the year, month, day, hours, minutes, and seconds \nconst startDate1 = new Date(year, month, day, hours, minutes, 0);\n\nmsg.payload = startDate1.getTime();\n\nflow.set('startDate1', startDate1);\n \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "f4287a07722c9695"
+            ]
+        ]
+    },
+    {
+        "id": "f4287a07722c9695",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3cdff49856e22814",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "setStopDate",
+        "func": "// get set up Date\nvar year = flow.get('setYear') || 0;\nvar month = flow.get('setMonth') || 0;\nvar day = flow.get('setDay') || 0;\n\n// get hours and minutes from drop down menu\nvar time = msg.payload.split(':');\nvar hours = time[0];\nvar minutes = time[1];\n\n//pass in the year, month, day, hours, minutes, and seconds \nconst stopDate1 = new Date(year, month, day, hours, minutes, 0);\n\nmsg.payload = stopDate1;\n\nflow.set('stopDate1', stopDate1);\n \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 280,
+        "wires": [
+            [
+                "3a7cec556f46d8fd"
+            ]
+        ]
+    },
+    {
+        "id": "e9dbc29060063d39",
+        "type": "ui_gauge",
+        "z": "062f09541c161fc1",
+        "name": "",
+        "group": "6f7ec007a94dc1fd",
+        "order": 13,
+        "width": 1,
+        "height": 1,
+        "gtype": "wave",
+        "title": "",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 630,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "cf9d9b7d3c03f49e",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "comparison",
+        "func": "/* compare current time with startTime and stopTime\n   if current time is inbetween, return 1, \n   else return 0 \n*/ \n\n// create current Date\nvar currentDate = new Date();\n// convert into milliseconds passed since midnight Jan 1 1970\nvar currentTime = currentDate.getTime();\n\nvar startDate1 = flow.get('startDate1') || 0;\nvar stopDate1 = flow.get('stopDate1') || 0;\nvar startDate2 = flow.get('startDate2') || 0;\nvar stopDate2 = flow.get('stopDate2') || 0;\nvar startDate3 = flow.get('startDate3') || 0;\nvar stopDate3 = flow.get('stopDate3') || 0;\nvar startDate4 = flow.get('startDate4') || 0;\nvar stopDate4 = flow.get('stopDate4') || 0;\nvar startDate5 = flow.get('startDate5') || 0;\nvar stopDate5 = flow.get('stopDate5') || 0;\n\n// convert into milliseconds passed since midnight Jan 1 1970\ntry { // .getTime()does only work with typeof \"object\" (Date)\n      // .getTime()does not work when 0 is assigned\n    var startTime1 = startDate1.getTime();\n    var stopTime1 = stopDate1.getTime();\n    var startTime2 = startDate2.getTime();\n    var stopTime2 = stopDate2.getTime();\n    var startTime3 = startDate3.getTime();\n    var stopTime3 = stopDate3.getTime();\n    var startTime4 = startDate4.getTime();\n    var stopTime4 = stopDate4.getTime();\n    var startTime5 = startDate5.getTime();\n    var stopTime5 = stopDate5.getTime();\n} finally {\n    if (((startTime1 < currentTime) && (currentTime < stopTime1)) ||\n        ((startTime2 < currentTime) && (currentTime < stopTime2)) ||\n        ((startTime3 < currentTime) && (currentTime < stopTime3)) ||\n        ((startTime4 < currentTime) && (currentTime < stopTime4)) ||\n        ((startTime5 < currentTime) && (currentTime < stopTime5))) {\n        msg.payload = 1;\n    } else {\n        msg.payload = 0;\n    }\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1180,
+        "wires": [
+            [
+                "11df5f7b6fb0cfa3"
+            ]
+        ]
+    },
+    {
+        "id": "485b1051edf9d2ea",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 24",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "68cb8a425471c970",
+        "type": "ui_dropdown",
+        "z": "062f09541c161fc1",
+        "name": "stop1",
+        "label": "stop1",
+        "tooltip": "set up stop Time",
+        "place": "Select option",
+        "group": "6f7ec007a94dc1fd",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "--:--",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:45",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "3cdff49856e22814",
+                "e0f0a56e54bdb511"
+            ]
+        ]
+    },
+    {
+        "id": "57abbe99c35c549d",
+        "type": "trigger",
+        "z": "062f09541c161fc1",
+        "name": "trigger",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 150,
+        "y": 1180,
+        "wires": [
+            [
+                "cf9d9b7d3c03f49e"
+            ]
+        ]
+    },
+    {
+        "id": "0e8d6579ac8d5374",
+        "type": "link out",
+        "z": "062f09541c161fc1",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "ccff754614b0d389"
+        ],
+        "x": 255,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ccff754614b0d389",
+        "type": "link in",
+        "z": "062f09541c161fc1",
+        "name": "link in 1",
+        "links": [
+            "0e8d6579ac8d5374",
+            "326932de87ce9191",
+            "a35e04fad3740d50",
+            "97e1a26a93d0ec2d",
+            "3ecb8fc392f5917a",
+            "315bcd3cd91cc562"
+        ],
+        "x": 45,
+        "y": 1180,
+        "wires": [
+            [
+                "57abbe99c35c549d"
+            ]
+        ]
+    },
+    {
+        "id": "e0f0a56e54bdb511",
+        "type": "link out",
+        "z": "062f09541c161fc1",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "818acce86389cf5a"
+        ],
+        "x": 255,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "818acce86389cf5a",
+        "type": "link in",
+        "z": "062f09541c161fc1",
+        "name": "link in 2",
+        "links": [
+            "e0f0a56e54bdb511",
+            "e2f32c0d19a3719d",
+            "99bc620ccc29c513",
+            "6f66db156d086693",
+            "f2930d45943e79cc"
+        ],
+        "x": 45,
+        "y": 1220,
+        "wires": [
+            [
+                "57abbe99c35c549d"
+            ]
+        ]
+    },
+    {
+        "id": "11df5f7b6fb0cfa3",
+        "type": "rbe",
+        "z": "062f09541c161fc1",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 470,
+        "y": 1180,
+        "wires": [
+            [
+                "485b1051edf9d2ea",
+                "e9dbc29060063d39"
+            ]
+        ]
+    },
+    {
+        "id": "f919edd3bba56ab9",
+        "type": "ui_dropdown",
+        "z": "062f09541c161fc1",
+        "name": "start2",
+        "label": "start2",
+        "tooltip": "set up start Time",
+        "place": "Select option",
+        "group": "6f7ec007a94dc1fd",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "--:--",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:45",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "430ba65ea94ea963",
+                "326932de87ce9191"
+            ]
+        ]
+    },
+    {
+        "id": "8c1daef03195befe",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 25",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "430ba65ea94ea963",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "setStartDate",
+        "func": "// create current Date\nvar currentDate = new Date();\nvar currentYear = currentDate.getFullYear();\nvar currentMonth = currentDate.getMonth();\nvar currentDay = currentDate.getDate();\n\n// get hours and minutes from drop down menu\nvar time = msg.payload.split(':');\nvar hours = time[0];\nvar minutes = time[1];\n\n//pass in the year, month, day, hours, minutes, and seconds \nconst startDate2 = new Date(currentYear, currentMonth, currentDay, hours, minutes, 0);\n\nmsg.payload = startDate2;\n\nflow.set('startDate2', startDate2);\n \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 380,
+        "wires": [
+            [
+                "59f97742dca5ac8a"
+            ]
+        ]
+    },
+    {
+        "id": "59f97742dca5ac8a",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 26",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d1ca74c0caa28e49",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "setStopDate",
+        "func": "// create current Date\nvar currentDate = new Date();\nvar currentYear = currentDate.getFullYear();\nvar currentMonth = currentDate.getMonth();\nvar currentDay = currentDate.getDate();\n\n// get hours and minutes from drop down menu\nvar time = msg.payload.split(':');\nvar hours = time[0];\nvar minutes = time[1];\n\n//pass in the year, month, day, hours, minutes, and seconds \nconst stopDate2 = new Date(currentYear, currentMonth, currentDay, hours, minutes, 0);\n\nmsg.payload = stopDate2;\n\nflow.set('stopDate2', stopDate2);\n \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 480,
+        "wires": [
+            [
+                "8c1daef03195befe"
+            ]
+        ]
+    },
+    {
+        "id": "ae40e9510bc59d4c",
+        "type": "ui_dropdown",
+        "z": "062f09541c161fc1",
+        "name": "stop2",
+        "label": "stop2",
+        "tooltip": "set up stop Time",
+        "place": "Select option",
+        "group": "6f7ec007a94dc1fd",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "--:--",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:45",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 150,
+        "y": 480,
+        "wires": [
+            [
+                "d1ca74c0caa28e49",
+                "e2f32c0d19a3719d"
+            ]
+        ]
+    },
+    {
+        "id": "326932de87ce9191",
+        "type": "link out",
+        "z": "062f09541c161fc1",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "ccff754614b0d389"
+        ],
+        "x": 255,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e2f32c0d19a3719d",
+        "type": "link out",
+        "z": "062f09541c161fc1",
+        "name": "link out 4",
+        "mode": "link",
+        "links": [
+            "818acce86389cf5a"
+        ],
+        "x": 255,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d95eabaf725888f8",
+        "type": "ui_dropdown",
+        "z": "062f09541c161fc1",
+        "name": "start3",
+        "label": "start3",
+        "tooltip": "set up start Time",
+        "place": "Select option",
+        "group": "6f7ec007a94dc1fd",
+        "order": 6,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "--:--",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:45",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 150,
+        "y": 580,
+        "wires": [
+            [
+                "f13dd0b62016a31c",
+                "a35e04fad3740d50"
+            ]
+        ]
+    },
+    {
+        "id": "3dcbc9516fd0bb88",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 27",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "f13dd0b62016a31c",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "setStartDate",
+        "func": "// create current Date\nvar currentDate = new Date();\nvar currentYear = currentDate.getFullYear();\nvar currentMonth = currentDate.getMonth();\nvar currentDay = currentDate.getDate();\n\n// get hours and minutes from drop down menu\nvar time = msg.payload.split(':');\nvar hours = time[0];\nvar minutes = time[1];\n\n//pass in the year, month, day, hours, minutes, and seconds \nconst startDate3 = new Date(currentYear, currentMonth, currentDay, hours, minutes, 0);\n\nmsg.payload = startDate3;\n\nflow.set('startDate3', startDate3);\n \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 580,
+        "wires": [
+            [
+                "fe86a8899275ab4e"
+            ]
+        ]
+    },
+    {
+        "id": "fe86a8899275ab4e",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 28",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "4b5055b46a59458c",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "setStopDate",
+        "func": "// create current Date\nvar currentDate = new Date();\nvar currentYear = currentDate.getFullYear();\nvar currentMonth = currentDate.getMonth();\nvar currentDay = currentDate.getDate();\n\n// get hours and minutes from drop down menu\nvar time = msg.payload.split(':');\nvar hours = time[0];\nvar minutes = time[1];\n\n//pass in the year, month, day, hours, minutes, and seconds \nconst stopDate3 = new Date(currentYear, currentMonth, currentDay, hours, minutes, 0);\n\nmsg.payload = stopDate3;\n\nflow.set('stopDate3', stopDate3);\n \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 680,
+        "wires": [
+            [
+                "3dcbc9516fd0bb88"
+            ]
+        ]
+    },
+    {
+        "id": "48d7344d01238c9d",
+        "type": "ui_dropdown",
+        "z": "062f09541c161fc1",
+        "name": "stop3",
+        "label": "stop3",
+        "tooltip": "set up stop Time",
+        "place": "Select option",
+        "group": "6f7ec007a94dc1fd",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "--:--",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:45",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 150,
+        "y": 680,
+        "wires": [
+            [
+                "4b5055b46a59458c",
+                "99bc620ccc29c513"
+            ]
+        ]
+    },
+    {
+        "id": "a35e04fad3740d50",
+        "type": "link out",
+        "z": "062f09541c161fc1",
+        "name": "link out 5",
+        "mode": "link",
+        "links": [
+            "ccff754614b0d389"
+        ],
+        "x": 255,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "99bc620ccc29c513",
+        "type": "link out",
+        "z": "062f09541c161fc1",
+        "name": "link out 6",
+        "mode": "link",
+        "links": [
+            "818acce86389cf5a"
+        ],
+        "x": 255,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "8fb6fbeae5535f88",
+        "type": "ui_dropdown",
+        "z": "062f09541c161fc1",
+        "name": "start4",
+        "label": "start4",
+        "tooltip": "set up start Time",
+        "place": "Select option",
+        "group": "6f7ec007a94dc1fd",
+        "order": 8,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "--:--",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:45",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 150,
+        "y": 780,
+        "wires": [
+            [
+                "cf1d0ee82653150d",
+                "97e1a26a93d0ec2d"
+            ]
+        ]
+    },
+    {
+        "id": "ca46026b0a717ec8",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 29",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "cf1d0ee82653150d",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "setStartDate",
+        "func": "// create current Date\nvar currentDate = new Date();\nvar currentYear = currentDate.getFullYear();\nvar currentMonth = currentDate.getMonth();\nvar currentDay = currentDate.getDate();\n\n// get hours and minutes from drop down menu\nvar time = msg.payload.split(':');\nvar hours = time[0];\nvar minutes = time[1];\n\n//pass in the year, month, day, hours, minutes, and seconds \nconst startDate4 = new Date(currentYear, currentMonth, currentDay, hours, minutes, 0);\n\nmsg.payload = startDate4;\n\nflow.set('startDate4', startDate4);\n \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 780,
+        "wires": [
+            [
+                "22ab14242982b233"
+            ]
+        ]
+    },
+    {
+        "id": "22ab14242982b233",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 30",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "ca06187e720ffc60",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "setStopDate",
+        "func": "// create current Date\nvar currentDate = new Date();\nvar currentYear = currentDate.getFullYear();\nvar currentMonth = currentDate.getMonth();\nvar currentDay = currentDate.getDate();\n\n// get hours and minutes from drop down menu\nvar time = msg.payload.split(':');\nvar hours = time[0];\nvar minutes = time[1];\n\n//pass in the year, month, day, hours, minutes, and seconds \nconst stopDate4 = new Date(currentYear, currentMonth, currentDay, hours, minutes, 0);\n\nmsg.payload = stopDate4;\n\nflow.set('stopDate4', stopDate4);\n \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 880,
+        "wires": [
+            [
+                "ca46026b0a717ec8"
+            ]
+        ]
+    },
+    {
+        "id": "f4154062a944d947",
+        "type": "ui_dropdown",
+        "z": "062f09541c161fc1",
+        "name": "stop4",
+        "label": "stop4",
+        "tooltip": "set up stop Time",
+        "place": "Select option",
+        "group": "6f7ec007a94dc1fd",
+        "order": 9,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "--:--",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:45",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 150,
+        "y": 880,
+        "wires": [
+            [
+                "ca06187e720ffc60",
+                "6f66db156d086693"
+            ]
+        ]
+    },
+    {
+        "id": "97e1a26a93d0ec2d",
+        "type": "link out",
+        "z": "062f09541c161fc1",
+        "name": "link out 7",
+        "mode": "link",
+        "links": [
+            "ccff754614b0d389"
+        ],
+        "x": 255,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "6f66db156d086693",
+        "type": "link out",
+        "z": "062f09541c161fc1",
+        "name": "link out 8",
+        "mode": "link",
+        "links": [
+            "818acce86389cf5a"
+        ],
+        "x": 255,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "e8967623ae499dc7",
+        "type": "ui_dropdown",
+        "z": "062f09541c161fc1",
+        "name": "start5",
+        "label": "start5",
+        "tooltip": "set up start Time",
+        "place": "Select option",
+        "group": "6f7ec007a94dc1fd",
+        "order": 10,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "--:--",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:45",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 150,
+        "y": 980,
+        "wires": [
+            [
+                "4810e7a056dc2ea2",
+                "3ecb8fc392f5917a"
+            ]
+        ]
+    },
+    {
+        "id": "c81f289c597c8cd2",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 31",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "4810e7a056dc2ea2",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "setStartDate",
+        "func": "// create current Date\nvar currentDate = new Date();\nvar currentYear = currentDate.getFullYear();\nvar currentMonth = currentDate.getMonth();\nvar currentDay = currentDate.getDate();\n\n// get hours and minutes from drop down menu\nvar time = msg.payload.split(':');\nvar hours = time[0];\nvar minutes = time[1];\n\n//pass in the year, month, day, hours, minutes, and seconds \nconst startDate5 = new Date(currentYear, currentMonth, currentDay, hours, minutes, 0);\n\nmsg.payload = startDate5;\n\nflow.set('startDate5', startDate5);\n \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 980,
+        "wires": [
+            [
+                "3fda92929c2a209d"
+            ]
+        ]
+    },
+    {
+        "id": "3fda92929c2a209d",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 32",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "0b99275fac19638f",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "setStopDate",
+        "func": "// create current Date\nvar currentDate = new Date();\nvar currentYear = currentDate.getFullYear();\nvar currentMonth = currentDate.getMonth();\nvar currentDay = currentDate.getDate();\n\n// get hours and minutes from drop down menu\nvar time = msg.payload.split(':');\nvar hours = time[0];\nvar minutes = time[1];\n\n//pass in the year, month, day, hours, minutes, and seconds \nconst stopDate5 = new Date(currentYear, currentMonth, currentDay, hours, minutes, 0);\n\nmsg.payload = stopDate5;\n\nflow.set('stopDate5', stopDate5);\n \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1080,
+        "wires": [
+            [
+                "c81f289c597c8cd2"
+            ]
+        ]
+    },
+    {
+        "id": "fa69aac4e3f76a84",
+        "type": "ui_dropdown",
+        "z": "062f09541c161fc1",
+        "name": "stop5",
+        "label": "stop5",
+        "tooltip": "set up stop Time",
+        "place": "Select option",
+        "group": "6f7ec007a94dc1fd",
+        "order": 11,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "--:--",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "00:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "01:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "02:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "03:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "04:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "05:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "06:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "07:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "08:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "09:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "10:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "11:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "13:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "14:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "15:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "17:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "18:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "19:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "20:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "21:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "22:45",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:00",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:15",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:30",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "23:45",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 150,
+        "y": 1080,
+        "wires": [
+            [
+                "0b99275fac19638f",
+                "f2930d45943e79cc"
+            ]
+        ]
+    },
+    {
+        "id": "3ecb8fc392f5917a",
+        "type": "link out",
+        "z": "062f09541c161fc1",
+        "name": "link out 9",
+        "mode": "link",
+        "links": [
+            "ccff754614b0d389"
+        ],
+        "x": 255,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "f2930d45943e79cc",
+        "type": "link out",
+        "z": "062f09541c161fc1",
+        "name": "link out 10",
+        "mode": "link",
+        "links": [
+            "818acce86389cf5a"
+        ],
+        "x": 255,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "3d393a7edee358e7",
+        "type": "ui_date_picker",
+        "z": "062f09541c161fc1",
+        "name": "",
+        "label": "date",
+        "group": "6f7ec007a94dc1fd",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "67bba146919a0480",
+                "315bcd3cd91cc562"
+            ]
+        ]
+    },
+    {
+        "id": "26403fbdd8d7be9c",
+        "type": "debug",
+        "z": "062f09541c161fc1",
+        "name": "debug 33",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "67bba146919a0480",
+        "type": "function",
+        "z": "062f09541c161fc1",
+        "name": "setYYMMDD",
+        "func": "var dt    = new Date(msg.payload);\nvar year  = dt.getFullYear();\nvar month = dt.getMonth();\nvar day   = dt.getDate();\n\nflow.set('setYear', year);\nflow.set('setMonth', month);\nflow.set('setDay', day);\n\nmsg.payload = dt;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 80,
+        "wires": [
+            [
+                "26403fbdd8d7be9c"
+            ]
+        ]
+    },
+    {
+        "id": "315bcd3cd91cc562",
+        "type": "link out",
+        "z": "062f09541c161fc1",
+        "name": "link out 11",
+        "mode": "link",
+        "links": [
+            "ccff754614b0d389",
+            "5ec10881f2ce0c17",
+            "83cc875ecf2063c4"
+        ],
+        "x": 255,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "5ec10881f2ce0c17",
+        "type": "link in",
+        "z": "062f09541c161fc1",
+        "name": "link in 3",
+        "links": [
+            "315bcd3cd91cc562"
+        ],
+        "x": 55,
+        "y": 180,
+        "wires": [
+            [
+                "0bbcfaa41c6f38f7"
+            ]
+        ]
+    },
+    {
+        "id": "83cc875ecf2063c4",
+        "type": "link in",
+        "z": "062f09541c161fc1",
+        "name": "link in 4",
+        "links": [
+            "315bcd3cd91cc562"
+        ],
+        "x": 55,
+        "y": 280,
+        "wires": [
+            [
+                "68cb8a425471c970"
+            ]
+        ]
+    },
+    {
+        "id": "c35dfd04828c5af3",
+        "type": "ui_spacer",
+        "z": "062f09541c161fc1",
+        "name": "spacer",
+        "group": "6f7ec007a94dc1fd",
+        "order": 12,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "9a2a13fadd83bb82",
+        "type": "ui_spacer",
+        "z": "062f09541c161fc1",
+        "name": "spacer",
+        "group": "6f7ec007a94dc1fd",
+        "order": 14,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "6f7ec007a94dc1fd",
+        "type": "ui_group",
+        "name": "Testing",
+        "tab": "185140dadd48ebc6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "185140dadd48ebc6",
+        "type": "ui_tab",
+        "name": "TestDashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
