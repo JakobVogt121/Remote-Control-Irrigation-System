@@ -37,6 +37,10 @@ void setup() {
 
   pinMode(pinValveOn, OUTPUT);
   pinMode(pinValveOff, OUTPUT);
+
+  digitalWrite(pinValveOn, LOW);
+  digitalWrite(pinValveOff, LOW);
+
   // Serial nur für debugging
   Serial.begin(9600);
   while (!Serial)
@@ -78,7 +82,7 @@ void loop() {
         digitalWrite(pinValveOff, HIGH);
       }
       confirm_cmd(rxValve, rxValveState);
-      delay(5000);
+      delay(10000); // wait to open/close valve
       esp_deep_sleep_start();
     } else {
       Serial.println("not for me");
