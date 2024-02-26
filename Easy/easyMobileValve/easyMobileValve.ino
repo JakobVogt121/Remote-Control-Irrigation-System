@@ -23,17 +23,19 @@
 #define dio0 26
 
 #define uS_TO_S_FACTOR 1000000  // Conversion factor for micro seconds to seconds
-#define TIME_TO_SLEEP  3        // Time ESP32 will go to sleep (in seconds)
+#define TIME_TO_SLEEP 10        // Time ESP32 will go to sleep (in seconds)
 
 #define pinValveOn 32
 #define pinValveOff 33
-const int moveValveDelay = 3000; // dleay to wait until valve has been opened/closed
+const int moveValveDelay = 3000;  // dleay to wait until valve has been opened/closed
 
-byte valve3Address = 3;
-byte stateCockCrow = 9;
-bool rx2byteMsg = false;
-byte rxValve = 0;
-byte rxValveState = 0;
+byte valve3Address = 3;            // address of this mobile valve
+byte stateCockCrow = 9;            // Cock Crow State
+const int numCockCrow = 3;         // Number of Cock Crows
+bool rx2byteMsg = false;           // received 2 byte message
+byte rxValve = 0;                  // receiving vavle (addressed from gate to a valve, not neccessarily this valve)
+byte rxValveState = 0;             // received valve state: 0 closed, 1 opened
+RTC_DATA_ATTR byte lastState = 0;  // laste state of this valve: 0 closed, 1 opened
 
 void setup() {
   //pinMode(LED_BUILTIN, OUTPUT);  // for debugging/visualization
@@ -65,10 +67,10 @@ void setup() {
 
 void loop() {
 
-  for (int i = 1; i <= 3; i++) {
+  for (int i = 1; i <= numCockCrow; i++) {
     cockCrow();
-    if (rx2byteMsg == true) {
-      i = 3;
+    if (rx2byteMsg == true && rxValve == valve3Address) {
+      break; // if to byte message for vavlve 3 has already been received
     }
     LoRa.receive();
     delay(500);  // random delay zwischen .. und .. einführen
@@ -79,14 +81,17 @@ void loop() {
     Serial.println("rxValveState: ");
     Serial.println(rxValveState);
     if (rxValve == valve3Address) {
-      Serial.println("V3");
-      if (rxValveState == 1) {
-        digitalWrite(pinValveOn, HIGH);
-      } else if (rxValveState == 0) {
-        digitalWrite(pinValveOff, HIGH);
+      if (rxValveState != lastState) {
+        if (rxValveState == 1) {
+          digitalWrite(pinValveOn, HIGH);
+        } else if (rxValveState == 0) {
+          digitalWrite(pinValveOff, HIGH);
+        }
       }
+      Serial.println("V3");
       confirm_cmd(rxValve, rxValveState);
       delay(moveValveDelay);
+      lastState = rxValveState;
       esp_deep_sleep_start();
     } else {
       Serial.println("not for me");
