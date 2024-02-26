@@ -24,6 +24,7 @@
 
 #define pinValveOn 32
 #define pinValveOff 33
+const int moveValveDelay = 3000; // dleay to wait until valve has been opened/closed
 
 byte valve3Address = 3;
 byte stateCockCrow = 9;
@@ -82,7 +83,7 @@ void loop() {
         digitalWrite(pinValveOff, HIGH);
       }
       confirm_cmd(rxValve, rxValveState);
-      delay(10000); // wait to open/close valve
+      delay(moveValveDelay);
       esp_deep_sleep_start();
     } else {
       Serial.println("not for me");
